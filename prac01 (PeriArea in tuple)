@@ -1,0 +1,23 @@
+/*1.Write a function that takes the lengths of three sides : side1, side2 and side3 of the triangle as the input from the user using input function and return the area
+and perimeter of the triangle as a tuple. Also, assert that sum of the length of any two sides is greater than the third side.*/
+
+def areaperimeter(a,b,c):
+    area=a*b*c
+    perimeter=a+b+c
+    return(area,perimeter)
+def side(a,b,c):
+    if((a+b>c)or(b+c>a)or(c+a>b)):
+        return True
+    else:
+        return False
+
+side1=int(input("Enter side 1: "))
+side2=int(input("Enter side 2: "))
+side3=int(input("Enter side 3: "))
+ap=areaperimeter(side1,side2,side3)
+print("Area: ",ap[0],"Perimeter: ",ap[1])
+p=side(side1,side2,side3)
+if(p):
+    print("Sum of two side is greater than third")
+else:
+    print("Did not satisfy the conditions")
