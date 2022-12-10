@@ -2,6 +2,7 @@
 a. search an element using linear search/ binary search.
 b. Sort the elements using bubble sort/ insertion sort/ selection sort.*/
 
+
 def linearsearch(l):
     name=input("Enter the name you want to search: ")
     for i in range(len(l)):
@@ -21,6 +22,8 @@ def binarysearch(l,name,start,end):
     if(name<l[mid]):
         return binarysearch(l,name,start,mid-1)
     return -1
+    
+    
 def bubblesort(lst):
     la=len(lst)
     for i in range (la):
@@ -30,6 +33,8 @@ def bubblesort(lst):
                 lst[j-1]=lst[j]
                 lst[j]=temp
     return lst
+    
+    
 def selectionsort(lst):
     la=len(lst)
     for i in range(la):
@@ -41,6 +46,8 @@ def selectionsort(lst):
         lst[min]=lst[i]
         lst[i]=temp
     return lst
+    
+    
 def insertionsort(lst):
     la=len(lst)
     for i in range (la):
