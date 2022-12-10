@@ -7,6 +7,44 @@ Good: Sales>=60000 and <80000
 Average: Sales>=40000 and <60000
 WorkHard: Sales<40000*/
 
+def sales_done(mylist):
+    a, b = mylist
+    print("Name : ", a)
+    print("Weekly sale : ", b)
+    print("Monthly sale : ", b*4)
+    y = 0
+    z = ""
+    if (b*4 > 50000):
+        print("Comission : ", b*4/20)
+    else:
+        print("Comission : ", 0)
+
+    if (b*4 > 80000):
+        print("Remark : Excellent")
+    elif (b*4 < 80000 and b*4 >= 60000):
+        print("Remark : Good")
+    elif (b*4 < 60000 and b*4 >= 40000):
+        print("Remark : Average")
+    else:
+        print("Remark : Work Hard")
+
+
+noofsalesmen = int(input("Enter the number of salesmen : "))
+salesmen_data = []
+
+for i in range(noofsalesmen):
+    a = input("Name : ")
+    b = float(input("Sales per week : "))
+    salesmen_data.append([a, b])
+
+print("----------------------")
+
+for i in salesmen_data:
+    print(sales_done(i))
+    print("----------------------")
+    
+    
+
 def sales():
     name=input("Enter the name: ")
     week1=int(input("Enter the sales in first week: "))
