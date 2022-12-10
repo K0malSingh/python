@@ -27,6 +27,7 @@ print("Primeter and area of the triangle: ", triangle(a, b, c))
 triangle_check(a, b, c)
 
 
+######################################################################################
 
 
 def areaperimeter(a,b,c):
